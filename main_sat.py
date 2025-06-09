@@ -1,6 +1,6 @@
 import os
 import argparse
-import tensorflow.compat.v1 as tf
+import tensorflow.compat.v1.layers as layers
 tf.disable_eager_execution()
 
 from config import Config
