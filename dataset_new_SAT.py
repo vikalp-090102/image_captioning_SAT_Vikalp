@@ -75,7 +75,7 @@ def prepare_train_data(config):
         reports = pd.read_csv(config.report_file)
         projections = pd.read_csv(config.projection_file)
 
-        merged = pd.merge(projections, reports, on="study_id")
+        merged = pd.merge(projections, reports, on="uid")
         merged = merged.dropna(subset=[config.caption_field, "image_path"])
 
         merged['image_file'] = merged['image_path'].apply(
